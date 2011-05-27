@@ -1,0 +1,40 @@
+# see http://www.kernel.org/pub/software/scm/git/docs/git-config.html
+
+[user]
+  name  = YOUR USER NAME
+  email = YOUR E-MAIL ADDERESS
+
+[core]
+#  autocrlf     = input
+  diff         = meld
+  editor       = vim
+  excludesfile = ~/.gitignore
+  pager        = less
+
+[color]
+  branch      = auto
+  diff        = auto
+  grep        = auto
+  interactive = auto
+  status      = auto
+  ui          = auto
+
+[push]
+  default = tracking
+
+[alias]
+  ad = add
+  ci = commit -a
+  co = checkout
+  dw = diff --color-words
+  ds = diff --staged
+  ft = fetch
+  lg = log --graph --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(magenta)%d'
+  ls = log --stat
+  lp = log -p
+  sh = show
+  st = status
+  up = pull --rebase
+  wc = whatchanged
+
+  ranking = shortlog -s -n --no-merges
