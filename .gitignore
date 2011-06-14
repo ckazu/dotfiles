@@ -3,4 +3,11 @@
 *~
 *.swp
 *.vim
+auto-install
+auto-save-list
+site-lisp
+ac-comphist.dat
+elpa
+yasnippets
 ___Gemfile.rb
+
