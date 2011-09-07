@@ -64,4 +64,5 @@
   ranking = shortlog -s -n --no-merges
 
   # for gerrit
-  review = push origin HEAD:refs/for/master
+  current-branch = describe --all --contains HEAD
+  review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
