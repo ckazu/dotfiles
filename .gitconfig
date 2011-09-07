@@ -63,6 +63,10 @@
 
   ranking = shortlog -s -n --no-merges
 
+  # see http://d.hatena.ne.jp/moro/20110719/1311048331
+  readit = tag -f 'READIT!' origin/master
+  newspaper = log -p --reverse 'READIT!'..origin/master
+
   # for gerrit
   current-branch = describe --all --contains HEAD
   review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
