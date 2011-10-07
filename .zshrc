@@ -17,7 +17,7 @@ case ${UID} in
     PROMPT2="%B%{${fg[magenta]}%}%_ #%{${reset_color}%}%b "
     SPROMPT="%B%{${fg[magenta]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-        PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
+        PROMPT="%{${fg[magenta]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
     ;;
 *)
     PROMPT="%{${fg[cyan]}%}%/ %%%{${reset_color}%} "
@@ -128,8 +128,11 @@ alias where="command -v"
 alias j="jobs -l"
 
 case "${OSTYPE}" in
-freebsd*|darwin*)
+freebsd*)
     alias ls="ls -G -w"
+    ;;
+darwin*)
+    alias ls="ls -a -G"
     ;;
 linux*)
     alias ls="ls -a --color"
@@ -146,7 +149,6 @@ alias df="df -h"
 alias su="su -l"
 alias sl="sl -ae"
 
-alias open="gnome-open"
 
 alias gomi='touch gomigomi\~ \.gomigomi\~ \#gomigomi\#; rm -f *\~; rm -f \.*\~; rm -f \#*\#'
 
@@ -214,6 +216,6 @@ kterm*|xterm*)
 esac
 
 ## load user .zshrc configuration file
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+[ -f ~/.zshmyrc ] && source ~/.zshmyrc
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
