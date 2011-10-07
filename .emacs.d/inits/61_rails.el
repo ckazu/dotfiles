@@ -3,10 +3,10 @@
 ;; cd rinari
 ;; git submodule init
 ;; git submodule update
-(add-to-list 'load-path "~/.emacs.d/site-lisp/rinari")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/rails/rinari")
 (require 'rinari)
 
-;; rails
+;;; rails
 ;; (defun try-complete-abbrev (old)
 ;;   (if (expand-abbrev) t nil))
 ;; (setq hippie-expand-try-functions-list

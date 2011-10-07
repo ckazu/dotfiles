@@ -3,6 +3,7 @@
 (global-set-key (kbd "C-x g")  'goto-line)            ; 指定行番号へ移動
 (global-set-key (kbd "C-j")    'newline)              ; 単純改行
 (global-set-key (kbd "C-m")    'newline-and-indent)   ; 改行時に自動インデント
+(global-set-key (kbd "M-<RET>") 'ns-toggle-fullscreen); fullscreen toggle
 
 ;; for tab
 (setq-default tab-width 2)

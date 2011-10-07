@@ -14,12 +14,12 @@
       (set-scroll-bar-mode 'right)              ; スクロールバー表示
       (setq line-spacing 0.2)                   ; 行間
       (setq ns-pop-up-frames nil)               ; 複数の emacs を開かない
-      (set-frame-font "ricty-10.5")
+      (set-frame-font "Ricty-18")
       ;; fullscreen
       ;; (auto-install-from-emacswiki "fullscreen.el")
-      (require 'fullscreen)                     ; 起動時にフルスクリーンにする
-      (fullscreen)))
-
+      ;; (require 'fullscreen)                     ; 起動時にフルスクリーンにする
+      ;; (fullscreen)
+))
 ;; for time on status line
 (progn
   (setq display-time-string-forms

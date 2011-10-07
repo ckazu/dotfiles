@@ -12,7 +12,7 @@
 (auto-install-update-emacswiki-package-name nil)
 (auto-install-compatibility-setup)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
-;; (setq init-loader-show-log-after-init nil)  ; 起動時にログを表示しない
+(setq init-loader-show-log-after-init nil)  ; 起動時にログを表示しない
 
 ;;; init-loader
 ;; (install-elisp "http://svn.coderepos.org/share/lang/elisp/init-loader/init-loader.el")
@@ -28,6 +28,6 @@
 
 ;;; marmalade
 ;; (auto-install-from-url "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el")
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+;; (require 'package)
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (package-initialize)

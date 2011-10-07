@@ -1,5 +1,6 @@
 ;;; ruby
 ;; sudo apt-get install ruby-mode
+(add-to-list 'load-path "~/.emacs.d/site-lisp/ruby")
 
 ;;; inf-ruby
 (autoload 'run-ruby "inf-ruby"
@@ -23,7 +24,7 @@ and source-file directory for your debugger." t)
 ;; (auto-install-from-emacswiki "ruby-block.el")
 (require 'ruby-block)
 (ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
+(setq ruby-block-highlight-toggle t)    ; nothing | minibuffer | overlay | t <- (minibuffer and overlay)
 
 ;; ;; ri-emacs
 ;; (setq ri-ruby-script "~/.emacs.d/ruby/ri-emacs.rb")
