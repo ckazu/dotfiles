@@ -1,18 +1,14 @@
 require 'pp'
-require 'irb/completion'
+# require 'irb/completion'
 require 'irb/ext/save-history'
 
 # use rubygems
-unless Class.const_defined?(:Rails)
-  require 'awesome_print'
-  require 'bond'
-  require 'what_methods'
-  require 'ir_b'
-  require 'g'
-  require 'wirble'
-  Wirble.init(:skip_prompt => :DEFAULT)
-  Wirble.colorize
-end
+require 'awesome_print'
+require 'wirble'
+require 'bond'
+require 'what_methods'
+Wirble.init(:skip_prompt => :DEFAULT)
+Wirble.colorize
 
 # configuration
 IRB.conf[:AUTO_INDENT] = true
