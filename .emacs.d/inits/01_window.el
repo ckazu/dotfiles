@@ -8,17 +8,27 @@
 ;; Window settings
 (if window-system
     (progn
-      (set-frame-parameter nil 'alpha 85)       ; 透明度
+      (set-frame-parameter nil 'alpha 75)       ; 透明度
       (menu-bar-mode t)                         ; メニューバー表示
       (tool-bar-mode nil)                       ; ツールバー非表示
       (set-scroll-bar-mode 'right)              ; スクロールバー表示
       (setq line-spacing 0.2)                   ; 行間
       (setq ns-pop-up-frames nil)               ; 複数の emacs を開かない
-      (set-frame-font "Ricty-18")
+
+      ;; font
+      (create-fontset-from-ascii-font "Ricty-18:weight=normal:slant=normal" nil "ricty")
+      (set-fontset-font "fontset-ricty" 'unicode (font-spec :family "Ricty" ) nil 'append)
+      (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
+
       ;; fullscreen
       ;; (auto-install-from-emacswiki "fullscreen.el")
       ;; (require 'fullscreen)                     ; 起動時にフルスクリーンにする
       ;; (fullscreen)
+
+      ;; hiwin-mode
+      ;; (auto-install-from-url "http://github.com/tomoya/hiwin-mode/raw/master/hiwin.el")
+;      (require 'hiwin)
+;      (hiwin-mode)
 ))
 ;; for time on status line
 (progn

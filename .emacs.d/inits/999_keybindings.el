@@ -40,6 +40,8 @@
 (key-chord-define-global ";r" 'org-remember)
 (key-chord-define-global ";s" 'anything-c-moccur-occur-by-moccur)
 (key-chord-define-global ";;" 'anything)
+(key-chord-define-global "dd" 'ispell-word)
+(key-chord-define-global "||" 'align)
 ;; 補完
 (setq hippie-expand-try-functions-list
       '(try-complete-file-name-partially

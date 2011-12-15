@@ -67,3 +67,7 @@ and source-file directory for your debugger." t)
 ;;               (require 'auto-complete-ruby)
 ;;               (make-local-variable 'ac-omni-completion-sources)
 ;;               (setq ac-omni-completion-sources '(("\\.\\=" . (ac-source-rcodetools)))))))
+
+;;; rspec-mode
+;;; (auto-install-from-url "https://raw.github.com/pezra/rspec-mode/master/rspec-mode.el")
+(require 'rspec-mode)
