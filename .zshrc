@@ -136,6 +136,7 @@ darwin*)
     ;;
 linux*)
     alias ls="ls -a --color"
+    alias open="gnome-open"
     ;;
 esac
 
@@ -148,7 +149,6 @@ alias df="df -h"
 
 alias su="su -l"
 alias sl="sl -ae"
-
 
 alias gomi='touch gomigomi\~ \.gomigomi\~ \#gomigomi\#; rm -f *\~; rm -f \.*\~; rm -f \#*\#'
 
@@ -183,6 +183,10 @@ esac
 
 
 ## terminal configuration
+export LESS='-R'
+# export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s' # apt-get install source-highlight
+export LESSOPEN='| /usr/local/Cellar/source-highlight/3.1.5/bin/src-hilite-lesspipe.sh %s' # brew install source-highlight
+
 unset LSCOLORS
 case "${TERM}" in
 xterm)
@@ -219,3 +223,11 @@ esac
 [ -f ~/.zshmyrc ] && source ~/.zshmyrc
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
+
+# # git completion
+# autoload bashcompinit
+# bashcompinit
+# source ~/git-completion.bash
+
+## attach screen
+screen -xR
