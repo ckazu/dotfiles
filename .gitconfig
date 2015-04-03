@@ -23,19 +23,24 @@
 [push]
   default = tracking
 
+[grep]
+  lineNumber = true
+
 [alias]
   ad   = add
   br   = branch
   ci   = commit
   cia  = commit --amend
+  amend = commit --amend -C HEAD
   co   = checkout
   cob  = checkout -b
   com  = checkout master
   dw   = diff --color-words
   ds   = diff --staged
   ft   = fetch
-  lg   = log --graph --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(magenta)%d'
-  ls   = log --stat
+  lg   = log --graph --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(reverse)%C(auto)%D'
+  lga  = log --graph --all --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(reverse)%C(auto)%D'
+  ls   = log --sta
   lp   = log -p
   rba  = rebase --abort
   rbc  = rebase --continue
@@ -59,6 +64,7 @@
   sl   = stash list
   st   = status
   up   = pull --rebase
+  prune= pull --prune
   wc   = whatchanged
 
   ranking = shortlog -s -n --no-merges
@@ -67,6 +73,14 @@
   readit = tag -f 'READIT!' origin/master
   newspaper = log -p --reverse 'READIT!'..origin/master
 
+  # remove merged all branches
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+
   # for gerrit
   current-branch = describe --all --contains HEAD
   review = "!sh -c 'git push origin HEAD:refs/for/master/`git current-branch`'"
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[pivotal]
+	api-token = 411fcb01ebdc36a03711a43d78a146f3
