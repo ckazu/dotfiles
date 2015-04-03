@@ -185,7 +185,7 @@ esac
 ## terminal configuration
 export LESS='-R'
 # export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s' # apt-get install source-highlight
-export LESSOPEN='| /usr/local/Cellar/source-highlight/3.1.5/bin/src-hilite-lesspipe.sh %s' # brew install source-highlight
+export LESSOPEN='| /usr/local/Cellar/source-highlight/3.1.7/bin/src-hilite-lesspipe.sh %s' # brew install source-highlight
 
 unset LSCOLORS
 case "${TERM}" in
@@ -222,7 +222,7 @@ esac
 ## load user .zshrc configuration file
 [ -f ~/.zshmyrc ] && source ~/.zshmyrc
 
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
+# if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 # # git completion
 # autoload bashcompinit
@@ -230,4 +230,10 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; f
 # source ~/git-completion.bash
 
 ## attach screen
-screen -xR
+# screen -xR
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+[ -f ~/.zsh/antigen/antigen.zsh ] && source ~/.zshrc.antigen
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

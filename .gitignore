@@ -11,3 +11,5 @@ elpa
 yasnippets
 ___Gemfile.rb
 .emacs.d/url
+*_flymake.*
+
