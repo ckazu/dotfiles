@@ -14,8 +14,8 @@
 (setq indent-line-function 'indent-relative-maybe)
 
 ;; for major-mode
-(define-key zencoding-mode-keymap (kbd "<C-return>") nil)
-(define-key zencoding-mode-keymap (kbd "<S-return>") 'zencoding-expand-line)
+;; (define-key zencoding-mode-keymap (kbd "<C-return>") nil)
+;; (define-key zencoding-mode-keymap (kbd "<S-return>") 'zencoding-expand-line)
 
 ;; anything
 (define-key global-map (kbd "C-;")   'anything)
@@ -24,6 +24,9 @@
 (anything-complete-shell-history-setup-key (kbd "C-o"))                  ;; shell の履歴を取得する
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)                    ;; kill ring history
 
+
+;; misc
+(defalias 'yes-or-no-p 'y-or-n-p)       ; yes を短縮形で良いように
 
 ;;; key-chord
 ;; (install-elisp "http://www.emacswiki.org/cgi-bin/wiki/download/key-chord.el")
@@ -52,6 +55,3 @@
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol
         ))
-
-;; misc
-(defalias 'yes-or-no-p 'y-or-n-p)       ; yes を短縮形で良いように

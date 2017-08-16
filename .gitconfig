@@ -40,6 +40,7 @@
   ft   = fetch
   lg   = log --graph --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(reverse)%C(auto)%D'
   lga  = log --graph --all --branches --date=short --decorate --pretty=format:'%C(yellow)%h %Cgreen%ad %Cblue%cn %Creset%s %C(reverse)%C(auto)%D'
+  log-grep = log --pretty=oneline --name-only -S
   ls   = log --sta
   lp   = log -p
   rba  = rebase --abort

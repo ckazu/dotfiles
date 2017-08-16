@@ -10,6 +10,8 @@
 (add-hook 'ruby-mode-hook
           '(lambda () (inf-ruby-keys)))
 
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;;; ruby-electric
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
@@ -70,4 +72,4 @@ and source-file directory for your debugger." t)
 
 ;;; rspec-mode
 ;;; (auto-install-from-url "https://raw.github.com/pezra/rspec-mode/master/rspec-mode.el")
-(require 'rspec-mode)
+;; (require 'rspec-mode)

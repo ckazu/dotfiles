@@ -3,7 +3,10 @@
 ## Environment variable configuration
 # LANG
 export LANG=ja_JP.UTF-8
-
+export PATH=/usr/local/bin:$PATH
+# JAVA
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
 # OTHERS
 export BUNDLER_EDITOR=emacs
 
@@ -237,3 +240,60 @@ export LESS=" -R "
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+export PYTHONPATH=~/work/caffe/python:$PYTHONPATH
+
+
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+# export COCOS_CONSOLE_ROOT=/Users/kchinnda/work/cocos2d-x-3.11.1/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/Users/kchinnda/work/colorz/cocos2d/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT=/Users/kchinnda/work
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+# export COCOS_TEMPLATES_ROOT=/Users/kchinnda/work/cocos2d-x-3.11.1/templates
+export COCOS_TEMPLATES_ROOT=/Users/kchinnda/work/colorz/cocos2d/templates
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable NDK_ROOT for cocos2d-x
+export NDK_ROOT=/usr/local/Cellar/android-ndk/r11b
+export PATH=$NDK_ROOT:$PATH
+
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/24.4.1_1
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# Add environment variable ANT_ROOT for cocos2d-x
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.6/bin
+export PATH=$ANT_ROOT:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/kchinnda/google-cloud-sdk/path.zsh.inc'
+# The next line enables shell command completion for gcloud.
+source '/Users/kchinnda/google-cloud-sdk/completion.zsh.inc'
+
+# YARN
+export PATH=$PATH:`yarn global bin`
+# GO
+export GOPATH=$HOME/gopath
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+# mono
+export MONO_GAC_PREFIX="/usr/local"
+# CUDA
+export PATH=/Developer/NVIDIA/CUDA-8.0/bin:$PATH
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib:$DYLD_LIBRARY_PATH
+
+# Google Cloud Functions Emulator
+function f { command functions "$@" }
+
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+
+# added by travis gem
+[ -f /Users/kchinnda/.travis/travis.sh ] && source /Users/kchinnda/.travis/travis.sh

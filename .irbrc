@@ -1,17 +1,26 @@
-require 'pp'
-# require 'irb/completion'
-require 'irb/ext/save-history'
+require 'rubygems'
 
-# use rubygems
-require 'awesome_print'
-require 'wirble'
-require 'bond'
-require 'what_methods'
-Wirble.init(:skip_prompt => :DEFAULT)
-Wirble.colorize
-
-# configuration
-IRB.conf[:AUTO_INDENT] = true
+# readline
+require 'readline'
 IRB.conf[:USE_READLINE] = true
-IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:PROMPT_MODE]  = :SIMPLE
+
+# completion
+require 'irb/completion'
+
+# indent
+IRB.conf[:AUTO_INDENT] = true
+
+# histroy
+require 'irb/ext/save-history'
+IRB.conf[:HISTORY_FILE] = "~/.irb_history"
+IRB.conf[:SAVE_HISTORY] = 100000
+
+# editor
+# require 'interactive_editor'
+require 'sketches'
+Sketches.config editor: 'vim', background: false 
+
+# colorize
+require 'wirb'
+require 'wirb/wp'
+Wirb.start

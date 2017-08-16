@@ -9,7 +9,7 @@ site-lisp
 ac-comphist.dat
 elpa
 yasnippets
-___Gemfile.rb
 .emacs.d/url
 *_flymake.*
-
+.DS_Store
+node_modules
