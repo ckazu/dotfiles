@@ -1,8 +1,8 @@
 # see http://www.kernel.org/pub/software/scm/git/docs/git-config.html
 
 [user]
-  name  = YOUR USER NAME
-  email = YOUR E-MAIL ADDRESS
+  name  = ckazu
+  email = 401343+ckazu@users.noreply.github.com
 
 [core]
 #  autocrlf     = input

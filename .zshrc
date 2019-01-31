@@ -5,11 +5,15 @@
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:$PATH
 # JAVA
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=`/usr/libexec/java_home`
+# export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home/bin
+export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jre/jdk/Contents/Home
+# export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+
 # OTHERS
 export BUNDLER_EDITOR=emacs
-
+export EDITOR=vim
 ## Default shell configuration
 # set prompt
 autoload colors; colors
@@ -241,11 +245,12 @@ export LESS=" -R "
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
+# export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=/Users/kchinda/Library/Android/sdk
 export PYTHONPATH=~/work/caffe/python:$PYTHONPATH
 
-
+### Add Flutter path
+export PATH=/usr/local/flutter/bin:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 # export COCOS_CONSOLE_ROOT=/Users/kchinnda/work/cocos2d-x-3.11.1/tools/cocos2d-console/bin
