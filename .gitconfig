@@ -5,7 +5,7 @@
   email = 401343+ckazu@users.noreply.github.com
 
 [core]
-#  autocrlf     = input
+  autocrlf     = input
   diff         = meld
   editor       = vim
 #  editor       = emacs
@@ -85,3 +85,8 @@
 	smudge = git-media-smudge %f
 [pivotal]
 	api-token = 411fcb01ebdc36a03711a43d78a146f3
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
